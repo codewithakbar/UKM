@@ -1,1 +1,11 @@
-django
+django==4.2.1
+pillow==9.3.0
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
+
+django-cors-headers
+drf-writable-nested
+django-filter
+django-oauth-toolkit==2.0.0
+
+django-mptt
