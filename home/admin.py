@@ -1,76 +1,47 @@
 from django.contrib import admin
-
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, HomePage
-
+from modeltranslation.admin import TranslationAdmin
 from mptt.admin import DraggableMPTTAdmin
 
-
-@admin.register(HomePage)
-class HomePageAdmin(DraggableMPTTAdmin):
-    list_display = ('tree_actions', 'indented_title')
-    fields = ("name",)
-    mptt_indent_field = "name"
-    group_fieldsets = True
-
+from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish
 
 @admin.register(Banner)
-class BannerAdmin(DraggableMPTTAdmin):
+class BannerAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("name", "image", "title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
 
-
 @admin.register(Categoy)
-class CategoyAdmin(DraggableMPTTAdmin):
+class CategoyAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("name",)
     mptt_indent_field = "name"
     group_fieldsets = True
 
-
 @admin.register(SideCategory)
-class SideCategoryAdmin(DraggableMPTTAdmin):
+class SideCategoryAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
-    fields = ("name", )
+    fields = ("name",)
     mptt_indent_field = "name"
     group_fieldsets = True
-
 
 @admin.register(Tanishuv)
-class TanishuvAdmin(DraggableMPTTAdmin):
+class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
-
 
 @admin.register(Jarayon)
-class JarayonAdmin(DraggableMPTTAdmin):
+class JarayonAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
 
-
 @admin.register(IshlabChiqrish)
-class IshlabChiqrishonAdmin(DraggableMPTTAdmin):
+class IshlabChiqrishAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc", "image")
     mptt_indent_field = "name"
     group_fieldsets = True
-
-
-
-# admin.site.register(Banner, BannerAdmin)
-# admin.site.register(
-#     Banner,
-#     DraggableMPTTAdmin,
-#     list_display=(
-#     'tree_actions',
-#     'indented_title',
-#     ),
-#     list_display_links=(
-#     'indented_title',
-#     ),
-# )

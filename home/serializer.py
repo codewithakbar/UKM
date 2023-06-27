@@ -11,6 +11,18 @@ class BannerSerializer(serializers.ModelSerializer):
         model = Banner
         fields = ['id', 'name', 'image', 'title', 'desc', 'links']
 
+    def get_links(self, obj):
+        request = self.context['request']
+        links = {
+                'self': reverse('banner-detail',
+                kwargs = {'pk': obj.pk}, request=request),
+                # 'business': None,
+                }
+
+        # if obj.business:
+        #     links['business'] = reverse('business-detail',
+        #         kwargs = {'pk': obj.business}, request=request)        
+        return links
 
 class CategoySerializer(serializers.ModelSerializer):
     

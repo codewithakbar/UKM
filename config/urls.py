@@ -20,11 +20,20 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 
-from home.views import HomePageViewSet
+from home.views import (
+    BannerViewSet, CategoyViewSet, SideCategoryViewSet,
+    TanishuvViewSet, JarayonViewSet, IshlabChiqrishViewSet
+)
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'home_pagse', HomePageViewSet)
+router.register('banners', BannerViewSet, basename='banner')
+router.register('categories', CategoyViewSet, basename='category')
+router.register('sidecategories', SideCategoryViewSet, basename='sidecategory')
+router.register('tanishuvs', TanishuvViewSet, basename='tanishuv')
+router.register('jarayons', JarayonViewSet, basename='jarayon')
+router.register('ishlabchiqrishs', IshlabChiqrishViewSet, basename='ishlabchiqrish')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
