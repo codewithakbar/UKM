@@ -1,34 +1,34 @@
-from modeltranslation.translator import translator, TranslationOptions
+from modeltranslation.translator import TranslationOptions, register
 from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish
 
 
+@register(Banner)
 class BannerTranslationOptions(TranslationOptions):
     fields = ('name', 'title', 'desc')
 
 
+@register(Categoy)
 class CategoyTranslationOptions(TranslationOptions):
     fields = ('name',)
 
 
+@register(SideCategory)
 class SideCategoryTranslationOptions(TranslationOptions):
     fields = ('name',)
 
 
+@register(Tanishuv)
 class TanishuvTranslationOptions(TranslationOptions):
     fields = ('title', 'desc')
 
 
+@register(Jarayon)
 class JarayonTranslationOptions(TranslationOptions):
     fields = ('title', 'desc')
 
 
+@register(IshlabChiqrish)
 class IshlabChiqrishTranslationOptions(TranslationOptions):
     fields = ('title', 'desc')
 
 
-translator.register(Banner, BannerTranslationOptions)
-translator.register(Categoy, CategoyTranslationOptions)
-translator.register(SideCategory, SideCategoryTranslationOptions)
-translator.register(Tanishuv, TanishuvTranslationOptions)
-translator.register(Jarayon, JarayonTranslationOptions)
-translator.register(IshlabChiqrish, IshlabChiqrishTranslationOptions)

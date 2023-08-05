@@ -5,18 +5,31 @@ from mptt.admin import DraggableMPTTAdmin
 from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish
 
 @admin.register(Banner)
-class BannerAdmin(DraggableMPTTAdmin, TranslationAdmin):
+class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("name", "image", "title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
 
+
 @admin.register(Categoy)
 class CategoyAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
-    fields = ("name",)
+    fields = ("name", "parent")
     mptt_indent_field = "name"
     group_fieldsets = True
+
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
+
 
 @admin.register(SideCategory)
 class SideCategoryAdmin(DraggableMPTTAdmin, TranslationAdmin):
@@ -25,6 +38,7 @@ class SideCategoryAdmin(DraggableMPTTAdmin, TranslationAdmin):
     mptt_indent_field = "name"
     group_fieldsets = True
 
+
 @admin.register(Tanishuv)
 class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
@@ -32,12 +46,14 @@ class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
     mptt_indent_field = "name"
     group_fieldsets = True
 
+
 @admin.register(Jarayon)
 class JarayonAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
+
 
 @admin.register(IshlabChiqrish)
 class IshlabChiqrishAdmin(DraggableMPTTAdmin, TranslationAdmin):

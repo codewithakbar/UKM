@@ -15,9 +15,13 @@ class Banner(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['name']
 
+    class Meta:
+        verbose_name = "Banner"
+        verbose_name_plural = "Bannerlar"
+
     def __str__(self) -> str:
         return self.name
-
+    
 
 
 class Categoy(MPTTModel):
@@ -27,8 +31,13 @@ class Categoy(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['name']
 
+    class Meta:
+        verbose_name = "Asosiy Kategoriya"
+        verbose_name_plural = "Asosiy Kategoriyalar"
+
     def __str__(self) -> str:
         return self.name
+
 
 
 class SideCategory(MPTTModel):
@@ -42,6 +51,8 @@ class SideCategory(MPTTModel):
         return self.name
 
 
+
+
 class Tanishuv(MPTTModel):
     title = models.CharField(max_length=232)
     desc = models.TextField()
@@ -52,6 +63,7 @@ class Tanishuv(MPTTModel):
 
     def __str__(self) -> str:
         return self.title
+
 
 
 # Yangiliklar
@@ -69,6 +81,7 @@ class Jarayon(MPTTModel):
         return self.title
 
 
+
 #Producsiya
 class IshlabChiqrish(MPTTModel):
     title = models.CharField(max_length=232)
@@ -80,6 +93,7 @@ class IshlabChiqrish(MPTTModel):
     def __str__(self) -> str:
         return self.title
     
+    
 
 class HomePage(MPTTModel):
 
@@ -88,5 +102,4 @@ class HomePage(MPTTModel):
 
     def __str__(self) -> str:
         return self.name
-
     
