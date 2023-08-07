@@ -49,10 +49,16 @@ class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
 
 @admin.register(Jarayon)
 class JarayonAdmin(DraggableMPTTAdmin, TranslationAdmin):
-    list_display = ('tree_actions', 'indented_title')
-    fields = ("title", "desc")
-    mptt_indent_field = "name"
+    list_display = ('tree_actions', 'indented_title', 'formatted_created_at')
+    fields = ('image', 'title', 'desc')
+    mptt_indent_field = 'name'
     group_fieldsets = True
+
+
+
+
+
+
 
 
 @admin.register(IshlabChiqrish)

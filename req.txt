@@ -12,3 +12,4 @@ django-mptt
 
 django-modeltranslation
 whitenoise
+django-ckeditor

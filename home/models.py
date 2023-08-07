@@ -2,6 +2,8 @@ from django.db import models
 
 from mptt.models import MPTTModel
 from mptt.fields import TreeForeignKey
+from ckeditor.fields import RichTextField
+
 
 
 class Banner(MPTTModel):
@@ -69,7 +71,8 @@ class Tanishuv(MPTTModel):
 # Yangiliklar
 class Jarayon(MPTTModel):
     title = models.CharField(max_length=232)
-    desc = models.TextField()
+    desc = RichTextField(null=True, blank=True)
+
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
 
     image = models.ImageField(upload_to="yangiliklar/%Y/%m", height_field=None, width_field=None, max_length=None)
@@ -80,6 +83,15 @@ class Jarayon(MPTTModel):
     def __str__(self) -> str:
         return self.title
 
+
+    @property
+    def formatted_created_at(self):
+        return self.created_at.strftime('%d.%m.%Y')
+
+
+    class Meta:
+        verbose_name = "Yangilik"
+        verbose_name_plural = "Yangiliklar"
 
 
 #Producsiya

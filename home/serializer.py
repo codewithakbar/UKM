@@ -62,7 +62,7 @@ class JarayonSerializer(WritableNestedModelSerializer, serializers.ModelSerializ
 
     class Meta:
         model = Jarayon
-        fields = ['id', 'title', 'desc', 'image']
+        fields = ['id', 'title', 'desc', 'image', "created_at"]
 
 
 class IshlabChiqrishSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
