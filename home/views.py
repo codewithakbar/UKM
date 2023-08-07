@@ -13,7 +13,7 @@ class BannerViewSet(viewsets.ModelViewSet):
 
 
 class CategoyViewSet(viewsets.ModelViewSet):
-    queryset = Categoy.objects.all()
+    queryset = Categoy.objects.filter(parent=None)
     serializer_class = CategoySerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 

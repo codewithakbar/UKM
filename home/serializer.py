@@ -24,11 +24,25 @@ class BannerSerializer(serializers.ModelSerializer):
         #         kwargs = {'pk': obj.business}, request=request)        
         return links
 
-class CategoySerializer(serializers.ModelSerializer):
-    
+class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
+    children = serializers.SerializerMethodField()
+    links = serializers.SerializerMethodField('get_links')
+
     class Meta:
         model = Categoy
-        fields = ['id', 'name']
+        fields = ['id', 'name_uz', 'name_ru', 'name_en', 'links', 'children']
+
+    def get_children(self, obj):
+        child_categories = obj.children.all()
+        child_serializer = CategoySerializer(child_categories, many=True)
+        return child_serializer.data
+    
+    def get_links(self, obj):
+        request = self.context.get('request')
+        links = {
+            'self': reverse('category-detail', kwargs={'pk': obj.pk}, request=request),
+        }
+        return links
 
 
 class SideCategorySerializer(serializers.ModelSerializer):
