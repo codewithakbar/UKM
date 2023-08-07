@@ -58,11 +58,16 @@ class TanishuvSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'desc']
 
 
-class JarayonSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
+class JarayonSerializer(serializers.ModelSerializer):
+    created_at = serializers.SerializerMethodField()
 
     class Meta:
         model = Jarayon
-        fields = ['id', 'title', 'desc', 'image', "created_at"]
+        fields = ['id', 'title', 'desc', 'image', 'created_at']
+
+    def get_created_at(self, instance):
+        return instance.created_at.strftime('%d.%m.%Y')
+
 
 
 class IshlabChiqrishSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
