@@ -7,7 +7,7 @@ from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiq
 @admin.register(Banner)
 class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
     list_display = ('tree_actions', 'indented_title')
-    fields = ("name", "image", "title", "desc")
+    fields = (("name_uz", "name_ru", "name_en"), ("title_uz", "title_ru", "title_en"), ("desc_uz", "desc_ru", "desc_en"),"image")
     mptt_indent_field = "name"
     group_fieldsets = True
 

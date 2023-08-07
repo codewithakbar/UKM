@@ -9,8 +9,8 @@ class Banner(MPTTModel):
     image = models.ImageField(upload_to="banners/%Y/%m")
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
 
-    title = models.CharField(max_length=232)
-    desc = models.CharField(max_length=232)
+    title = models.CharField(max_length=232, null=True, blank=True)
+    desc = models.TextField()
 
     class MPTTMeta:
         order_insertion_by = ['name']
@@ -19,8 +19,8 @@ class Banner(MPTTModel):
         verbose_name = "Banner"
         verbose_name_plural = "Bannerlar"
 
-    def __str__(self) -> str:
-        return self.name
+    # def __str__(self) -> str:
+    #     return self.name_ru
     
 
 
