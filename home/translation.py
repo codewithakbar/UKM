@@ -9,7 +9,7 @@ class BannerTranslationOptions(TranslationOptions):
 
 @register(Categoy)
 class CategoyTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = ('name','slug')
 
 
 @register(SideCategory)

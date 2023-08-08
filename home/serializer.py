@@ -30,7 +30,7 @@ class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializ
 
     class Meta:
         model = Categoy
-        fields = ['id', 'name_uz', 'name_ru', 'name_en', 'links', 'children']
+        fields = ['id', 'slug', 'name_uz', 'name_ru', 'name_en', 'links', 'children']
 
     def get_children(self, obj):
         child_categories = obj.children.all()
