@@ -26,23 +26,24 @@ class BannerSerializer(serializers.ModelSerializer):
 
 class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
     children = serializers.SerializerMethodField()
-    links = serializers.SerializerMethodField('get_links')
+    yordamchi = serializers.SerializerMethodField()
 
     class Meta:
         model = Categoy
-        fields = ['id', 'slug', 'name_uz', 'name_ru', 'name_en', 'links', 'children']
+        fields = ['id', 'slug', 'name_uz', 'name_ru', 'name_en', 'children', 'yordamchi']
 
     def get_children(self, obj):
         child_categories = obj.children.all()
         child_serializer = CategoySerializer(child_categories, many=True)
         return child_serializer.data
+
+    def get_yordamchi(self, obj):
+        if obj.parent:
+            return obj.parent.slug  # Adjust to the appropriate field for the parent category's name
+        return None
+
     
-    def get_links(self, obj):
-        request = self.context.get('request')
-        links = {
-            'self': obj.slug
-        }
-        return links
+
 
 
 class SideCategorySerializer(serializers.ModelSerializer):
