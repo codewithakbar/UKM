@@ -40,7 +40,7 @@ class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializ
     def get_links(self, obj):
         request = self.context.get('request')
         links = {
-            'self': reverse('category-detail', kwargs={'pk': obj.slug}, request=request),
+            'self': obj.slug
         }
         return links
 
