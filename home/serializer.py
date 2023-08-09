@@ -7,9 +7,10 @@ from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiq
 
 class BannerSerializer(serializers.ModelSerializer):
     links = serializers.SerializerMethodField('get_links')
+
     class Meta:
         model = Banner
-        fields = ['id', 'name', 'image', 'title', 'desc', 'links']
+        fields = ['id', 'title', 'name_uz', 'name_ru', 'name_en', 'desc_uz', 'desc_ru', 'desc_en', 'links', 'image']
 
     def get_links(self, obj):
         request = self.context['request']
@@ -23,6 +24,8 @@ class BannerSerializer(serializers.ModelSerializer):
         #     links['business'] = reverse('business-detail',
         #         kwargs = {'pk': obj.business}, request=request)        
         return links
+
+
 
 class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
     children = serializers.SerializerMethodField()
@@ -44,19 +47,20 @@ class CategoySerializer(WritableNestedModelSerializer, serializers.ModelSerializ
 
     
 
-
-
 class SideCategorySerializer(serializers.ModelSerializer):
+
     class Meta:
         model = SideCategory
-        fields = ['id', 'name']
+        fields = ['id', 'name_uz', 'name_ru', 'name_en']
+
 
 
 class TanishuvSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tanishuv
-        fields = ['id', 'title', 'desc']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en',]
+
 
 
 class JarayonSerializer(serializers.ModelSerializer):
@@ -64,7 +68,8 @@ class JarayonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Jarayon
-        fields = ['id', 'title', 'desc', 'image', 'created_at']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'created_at', 'image']
+
 
     def get_created_at(self, instance):
         return instance.created_at.strftime('%d.%m.%Y')
@@ -75,7 +80,7 @@ class IshlabChiqrishSerializer(WritableNestedModelSerializer, serializers.ModelS
 
     class Meta:
         model = IshlabChiqrish
-        fields = ['id', 'title', 'desc', 'image']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'image']
 
     
 
