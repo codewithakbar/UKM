@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework import routers
 from .views import (
-    BannerAPIView, CategoyAPIView, SideCategoryAPIView,
+    AksiyodorlarViewSet, BannerAPIView, CategoyAPIView, SideCategoryAPIView,
     TanishuvAPIView, JarayonAPIView, IshlabChiqrishAPIView
 )
 
@@ -15,7 +15,13 @@ router.register('sidecategories', SideCategoryAPIView, basename='sidecategory')
 router.register('tanishuvs', TanishuvAPIView, basename='tanishuv')
 router.register('jarayons', JarayonAPIView, basename='jarayon')
 router.register('ishlabchiqrishs', IshlabChiqrishAPIView, basename='ishlabchiqrish')
+router.register(r'categories/(?P<category_id>\d+)/aksiyodorlar', AksiyodorlarViewSet, basename='aksiyodorlar')
+
 
 urlpatterns = [
     path('', include(router.urls)),
 ]
+
+
+
+"""   ISHLAMIDI   """

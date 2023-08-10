@@ -22,7 +22,7 @@ from django.views.static import serve
 from django.conf.urls.i18n import i18n_patterns
 
 from home.views import (
-    BannerViewSet, CategoyViewSet, SideCategoryViewSet,
+    AksiyodorlarViewSet, BannerViewSet, CategoyViewSet, SideCategoryViewSet,
     TanishuvViewSet, JarayonViewSet, IshlabChiqrishViewSet
 )
 from rest_framework import routers
@@ -34,7 +34,7 @@ router.register('sidecategories', SideCategoryViewSet, basename='sidecategory')
 router.register('tanishuvs', TanishuvViewSet, basename='tanishuv')
 router.register('jarayons', JarayonViewSet, basename='jarayon')
 router.register('ishlabchiqrishs', IshlabChiqrishViewSet, basename='ishlabchiqrish')
-
+router.register(r'cat/(?P<category_id>\d+)', AksiyodorlarViewSet, basename='aksiyodorlar')
 
 urlpatterns = [
     

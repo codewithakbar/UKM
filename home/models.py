@@ -56,6 +56,17 @@ class SideCategory(MPTTModel):
 
 
 
+class Aksiyodorlar(MPTTModel):
+    title = models.CharField(max_length=232)
+    file = models.FileField(upload_to="media/pdf/%Y/%m/%d")
+    category = models.ManyToManyField(Categoy)
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+
+
+    def __str__(self) -> str:
+        return self.title
+
+
 
 class Tanishuv(MPTTModel):
     title = models.CharField(max_length=232)

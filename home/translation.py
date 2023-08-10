@@ -1,5 +1,5 @@
 from modeltranslation.translator import TranslationOptions, register
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish
+from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
 
 
 @register(Banner)
@@ -32,3 +32,6 @@ class IshlabChiqrishTranslationOptions(TranslationOptions):
     fields = ('title', 'desc')
 
 
+@register(Aksiyodorlar)
+class AksiyodorlarTranslationOptions(TranslationOptions):
+    fields = ('title', )
