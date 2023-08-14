@@ -1,4 +1,6 @@
 from modeltranslation.translator import TranslationOptions, register
+
+from products.models import ProductCategories
 from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
 
 

@@ -25,7 +25,11 @@ from home.views import (
     AksiyodorlarViewSet, BannerViewSet, CategoyViewSet, SideCategoryViewSet,
     TanishuvViewSet, JarayonViewSet, IshlabChiqrishViewSet
 )
+
+from products.views import ProductsViewSet, ProductCategoriesViewSet, ProductDetailViewSet
+
 from rest_framework import routers
+
 
 router = routers.DefaultRouter()
 router.register('banners', BannerViewSet, basename='banner')
@@ -34,7 +38,10 @@ router.register('sidecategories', SideCategoryViewSet, basename='sidecategory')
 router.register('tanishuvs', TanishuvViewSet, basename='tanishuv')
 router.register('jarayons', JarayonViewSet, basename='jarayon')
 router.register('ishlabchiqrishs', IshlabChiqrishViewSet, basename='ishlabchiqrish')
+router.register('products', ProductsViewSet, basename='products')
+router.register('category', ProductCategoriesViewSet, basename='categories')
 router.register(r'cat/(?P<category_id>\d+)', AksiyodorlarViewSet, basename='aksiyodorlar')
+router.register(r'product/detail/(?P<category_id>\d+)', ProductDetailViewSet, basename='detail')
 
 urlpatterns = [
     
