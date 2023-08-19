@@ -65,7 +65,17 @@ class Aksiyodorlar(MPTTModel):
 
     def __str__(self) -> str:
         return self.title
+    
 
+class Raxbariyat(MPTTModel):
+    title = models.CharField(max_length=232)
+    desc = models.TextField()
+    image = models.ImageField(upload_to="raxbarlar/%Y/%m")
+    category = models.ForeignKey(Categoy, on_delete=models.CASCADE)
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+
+    def __str__(self) -> str:
+        return self.title
 
 
 class Tanishuv(MPTTModel):

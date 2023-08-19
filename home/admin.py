@@ -2,7 +2,7 @@ from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 from mptt.admin import DraggableMPTTAdmin
 
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
+from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
 
 @admin.register(Banner)
 class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
@@ -46,6 +46,16 @@ class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
     fields = ("title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
+
+
+
+@admin.register(Raxbariyat)
+class RaxbariyatAdmin(DraggableMPTTAdmin, TranslationAdmin):
+    list_display = ('tree_actions', 'indented_title')
+    fields = ("title", "desc", "image", "category")
+    mptt_indent_field = "name"
+    group_fieldsets = True
+
 
 
 @admin.register(Jarayon)

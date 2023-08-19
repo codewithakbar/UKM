@@ -1,7 +1,7 @@
 from rest_framework import generics, viewsets, permissions
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
+from .models import Banner, Categoy, Raxbariyat, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
 from .serializer import (
-    BannerSerializer, CategoySerializer, SideCategorySerializer,
+    BannerSerializer, CategoySerializer, RaxbariyatSerializer, SideCategorySerializer,
     TanishuvSerializer, JarayonSerializer, IshlabChiqrishSerializer, 
     AksiyodorlaSerializer
 )
@@ -36,11 +36,20 @@ class JarayonViewSet(viewsets.ModelViewSet):
     serializer_class = JarayonSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+    
+
+class RaxbariyatViewSet(viewsets.ModelViewSet):
+    queryset = Raxbariyat.objects.all()
+    serializer_class = RaxbariyatSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
 
 class IshlabChiqrishViewSet(viewsets.ModelViewSet):
     queryset = IshlabChiqrish.objects.all()
     serializer_class = IshlabChiqrishSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
 
 class AksiyodorlarViewSet(viewsets.ModelViewSet):

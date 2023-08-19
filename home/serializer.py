@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.reverse import reverse
 from drf_writable_nested import WritableNestedModelSerializer
 
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
+from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
 
 
 class BannerSerializer(serializers.ModelSerializer):
@@ -67,6 +67,13 @@ class TanishuvSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tanishuv
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en',]
+
+
+class RaxbariyatSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Raxbariyat
         fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en',]
 
 
