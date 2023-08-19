@@ -39,9 +39,13 @@ class JarayonViewSet(viewsets.ModelViewSet):
     
 
 class RaxbariyatViewSet(viewsets.ModelViewSet):
-    queryset = Raxbariyat.objects.all()
     serializer_class = RaxbariyatSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        category_id = self.kwargs['category_id']
+        queryset = Raxbariyat.objects.filter(category__id=category_id)
+        return queryset
 
 
 
@@ -54,8 +58,11 @@ class IshlabChiqrishViewSet(viewsets.ModelViewSet):
 
 class AksiyodorlarViewSet(viewsets.ModelViewSet):
     serializer_class = AksiyodorlaSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get_queryset(self):
         category_id = self.kwargs['category_id']
         queryset = Aksiyodorlar.objects.filter(category__id=category_id)
         return queryset
+
+
