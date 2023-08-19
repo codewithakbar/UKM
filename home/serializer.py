@@ -74,7 +74,7 @@ class RaxbariyatSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Raxbariyat
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en',]
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'category', 'image']
 
 
 
