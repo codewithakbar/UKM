@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.reverse import reverse
 from drf_writable_nested import WritableNestedModelSerializer
 
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
+from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
 
 
 class BannerSerializer(serializers.ModelSerializer):
@@ -67,14 +67,22 @@ class TanishuvSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tanishuv
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en',]
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en']
+
+
+class RaxbariyatTableSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RaxbariyatTable
+        fields = ['desc_uz', 'desc_ru', 'desc_en']  # Add other fields as needed
+
 
 
 class RaxbariyatSerializer(serializers.ModelSerializer):
+    raxbariyats = RaxbariyatTableSerializer(many=True)  
 
     class Meta:
         model = Raxbariyat
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'category', 'image']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'lavozim_uz', 'lavozim_ru', 'lavozim_en', 'category', 'image', 'raxbariyats']
 
 
 

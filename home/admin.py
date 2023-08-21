@@ -2,7 +2,15 @@ from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
 from mptt.admin import DraggableMPTTAdmin
 
-from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
+from .models import Banner, Categoy, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, RaxbariyatTable
+
+
+
+class RaxbariyatTableInline(admin.TabularInline):
+    model = RaxbariyatTable
+    fields = ("desc_uz", "desc_ru", "desc_en")
+    extra = 1
+
 
 @admin.register(Banner)
 class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
@@ -51,8 +59,9 @@ class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
 
 @admin.register(Raxbariyat)
 class RaxbariyatAdmin(DraggableMPTTAdmin, TranslationAdmin):
+    inlines = [RaxbariyatTableInline]
     list_display = ('tree_actions', 'indented_title')
-    fields = ("title", "desc", "image", "category")
+    fields = ("title", "lavozim", "image", "category")
     mptt_indent_field = "name"
     group_fieldsets = True
 
