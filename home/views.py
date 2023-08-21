@@ -58,6 +58,13 @@ class TexnikaViewSet(viewsets.ModelViewSet):
         return queryset
 
 
+class TexnikaAllViewSet(viewsets.ModelViewSet):
+    serializer_class = TexnikaSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    queryset = Texnika.objects.order_by("-id").all()
+    
+
 
 class IshlabChiqrishViewSet(viewsets.ModelViewSet):
     queryset = IshlabChiqrish.objects.all()
