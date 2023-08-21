@@ -1,9 +1,9 @@
 from rest_framework import generics, viewsets, permissions
-from .models import Banner, Categoy, Raxbariyat, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar
+from .models import Banner, Categoy, Raxbariyat, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Texnika
 from .serializer import (
     BannerSerializer, CategoySerializer, RaxbariyatSerializer, SideCategorySerializer,
     TanishuvSerializer, JarayonSerializer, IshlabChiqrishSerializer, 
-    AksiyodorlaSerializer
+    AksiyodorlaSerializer, TexnikaSerializer
 )
 
 
@@ -45,6 +45,16 @@ class RaxbariyatViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         category_id = self.kwargs['category_id']
         queryset = Raxbariyat.objects.filter(category__id=category_id)
+        return queryset
+
+
+class TexnikaViewSet(viewsets.ModelViewSet):
+    serializer_class = TexnikaSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        category_id = self.kwargs['category_id']
+        queryset = Texnika.objects.filter(category__id=category_id)
         return queryset
 
 

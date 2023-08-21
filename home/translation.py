@@ -1,7 +1,7 @@
 from modeltranslation.translator import TranslationOptions, register
 
 from products.models import ProductCategories
-from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat
+from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, Texnika
 
 
 @register(Banner)
@@ -47,3 +47,10 @@ class RaxbariyatTranslationOptions(TranslationOptions):
 @register(RaxbariyatTable)
 class RaxbariyatTableTranslationOptions(TranslationOptions):
     fields = ('desc', )
+
+
+@register(Texnika)
+class TexnikaTranslationOptions(TranslationOptions):
+    fields = ('title', 'madel')
+
+    

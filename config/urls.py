@@ -23,7 +23,7 @@ from django.conf.urls.i18n import i18n_patterns
 
 from home.views import (
     AksiyodorlarViewSet, BannerViewSet, CategoyViewSet, SideCategoryViewSet,
-    TanishuvViewSet, JarayonViewSet, IshlabChiqrishViewSet, RaxbariyatViewSet
+    TanishuvViewSet, JarayonViewSet, IshlabChiqrishViewSet, RaxbariyatViewSet, TexnikaViewSet
 )
 
 from products.views import ProductsViewSet, ProductCategoriesViewSet, ProductDetailViewSet
@@ -41,6 +41,7 @@ router.register('ishlabchiqrishs', IshlabChiqrishViewSet, basename='ishlabchiqri
 router.register('products', ProductsViewSet, basename='products')
 router.register('category', ProductCategoriesViewSet, basename='categories')
 router.register(r'rax/(?P<category_id>\d+)', RaxbariyatViewSet, basename='raxbarlar')
+router.register(r'tex/(?P<category_id>\d+)', TexnikaViewSet, basename='texnika')
 router.register(r'cat/(?P<category_id>\d+)', AksiyodorlarViewSet, basename='aksiyodorlar')
 router.register(r'product/detail/(?P<category_id>\d+)', ProductDetailViewSet, basename='detail')
 
