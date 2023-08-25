@@ -92,7 +92,7 @@ class TexnikaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Texnika
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image']
 
 
 

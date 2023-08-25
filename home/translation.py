@@ -51,6 +51,6 @@ class RaxbariyatTableTranslationOptions(TranslationOptions):
 
 @register(Texnika)
 class TexnikaTranslationOptions(TranslationOptions):
-    fields = ('title', 'madel')
+    fields = ('title', 'madel', 'desc')
 
     

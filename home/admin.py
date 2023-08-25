@@ -12,12 +12,14 @@ class RaxbariyatTableInline(admin.TabularInline):
     extra = 1
 
 
+
 @admin.register(Banner)
 class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = (("name_uz", "name_ru", "name_en"), ("title_uz", "title_ru", "title_en"), ("desc_uz", "desc_ru", "desc_en"),"image")
     mptt_indent_field = "name"
     group_fieldsets = True
+
 
 
 @admin.register(Categoy)
@@ -40,6 +42,7 @@ class CategoyAdmin(DraggableMPTTAdmin, TranslationAdmin):
 
 
 
+
 @admin.register(SideCategory)
 class SideCategoryAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
@@ -48,12 +51,15 @@ class SideCategoryAdmin(DraggableMPTTAdmin, TranslationAdmin):
     group_fieldsets = True
 
 
+
+
 @admin.register(Tanishuv)
 class TanishuvAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
+
 
 
 
@@ -67,12 +73,14 @@ class RaxbariyatAdmin(DraggableMPTTAdmin, TranslationAdmin):
 
 
 
+
 @admin.register(Texnika)
 class TexnikaAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
-    fields = ("title", "madel", "image", "category")
+    fields = ("title", "madel", "image", "category", "desc")
     mptt_indent_field = "name"
     group_fieldsets = True
+
 
 
 
@@ -82,6 +90,7 @@ class JarayonAdmin(DraggableMPTTAdmin, TranslationAdmin):
     fields = ('image', 'title', 'desc')
     mptt_indent_field = 'name'
     group_fieldsets = True
+
 
 
 
@@ -95,10 +104,11 @@ class AksiyodorlarAdmin(DraggableMPTTAdmin, TranslationAdmin):
 
 
 
-
 @admin.register(IshlabChiqrish)
 class IshlabChiqrishAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     fields = ("title", "desc", "image")
     mptt_indent_field = "name"
     group_fieldsets = True
+
+

@@ -67,6 +67,7 @@ class Aksiyodorlar(MPTTModel):
         return self.title
     
 
+
 class Raxbariyat(MPTTModel):
     title = models.CharField(max_length=232)
     lavozim = models.CharField(max_length=232)
@@ -78,15 +79,18 @@ class Raxbariyat(MPTTModel):
         return self.title
 
 
+
 class Texnika(MPTTModel):
     title = models.CharField(max_length=232)
     madel = models.CharField(max_length=232)
+    desc = RichTextField()
     image = models.ImageField(upload_to="raxbarlar/%Y/%m")
     category = models.ForeignKey(Categoy, on_delete=models.CASCADE)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
 
     def __str__(self) -> str:
         return self.title
+
 
 
 class Tanishuv(MPTTModel):
@@ -128,6 +132,7 @@ class Jarayon(MPTTModel):
         verbose_name_plural = "Yangiliklar"
 
 
+
 #Producsiya
 class IshlabChiqrish(MPTTModel):
     title = models.CharField(max_length=232)
@@ -141,8 +146,6 @@ class IshlabChiqrish(MPTTModel):
     
     
 
-
-
 # Tabular Inline 
 
 class RaxbariyatTable(models.Model):
@@ -153,6 +156,8 @@ class RaxbariyatTable(models.Model):
 
     def __str__(self) -> str:
         return self.desc
+
+
 
 
 class HomePage(MPTTModel):
