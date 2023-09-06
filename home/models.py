@@ -158,6 +158,13 @@ class RaxbariyatTable(models.Model):
         return self.desc
 
 
+class TexnikaTable(models.Model):
+
+    texnika = models.ForeignKey(Texnika, default=None, related_name='texnikala', on_delete=models.CASCADE, blank=True, null=True)
+
+    title = models.CharField(max_length=233)
+    kub = models.CharField(max_length=233)
+    sigim = models.CharField(max_length=233)
 
 
 class HomePage(MPTTModel):
