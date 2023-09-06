@@ -95,11 +95,11 @@ class RaxbariyatSerializer(serializers.ModelSerializer):
 
 
 class TexnikaSerializer(serializers.ModelSerializer):
-    texnika_table = TexnikaTableSerializer(many=True)  
+    texnikala = TexnikaTableSerializer(many=True)  
 
     class Meta:
         model = Texnika
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image', 'texnika_table']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image', 'texnikala']
 
 
 
