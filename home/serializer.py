@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.reverse import reverse
 from drf_writable_nested import WritableNestedModelSerializer
 
-from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, Texnika
+from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, Texnika, TexnikaTable
 
 
 class BannerSerializer(serializers.ModelSerializer):
@@ -75,8 +75,14 @@ class TanishuvSerializer(serializers.ModelSerializer):
 class RaxbariyatTableSerializer(serializers.ModelSerializer):
     class Meta:
         model = RaxbariyatTable
-        fields = ['desc_uz', 'desc_ru', 'desc_en']  # Add other fields as needed
+        fields = ['desc_uz', 'desc_ru', 'desc_en']
 
+
+
+class TexnikaTableSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TexnikaTable
+        fields = ("title", "kub", "sigim")
 
 
 class RaxbariyatSerializer(serializers.ModelSerializer):
@@ -87,12 +93,13 @@ class RaxbariyatSerializer(serializers.ModelSerializer):
         fields = ['id', 'title_uz', 'title_ru', 'title_en', 'lavozim_uz', 'lavozim_ru', 'lavozim_en', 'category', 'image', 'raxbariyats']
 
 
+
 class TexnikaSerializer(serializers.ModelSerializer):
-    # raxbariyats = RaxbariyatTableSerializer(many=True)  
+    texnika_table = TexnikaTableSerializer(many=True)  
 
     class Meta:
         model = Texnika
-        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image']
+        fields = ['id', 'title_uz', 'title_ru', 'title_en', 'desc_uz', 'desc_ru', 'desc_en', 'madel_uz', 'madel_ru', 'madel_en', 'category', 'image', 'texnika_table']
 
 
 
