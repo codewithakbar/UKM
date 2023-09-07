@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'mptt',
     'home',
     'products',
+    'news'
 ]
 
 REST_FRAMEWORK = {

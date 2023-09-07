@@ -28,6 +28,8 @@ from home.views import (
 
 from products.views import ProductsViewSet, ProductCategoriesViewSet, ProductDetailViewSet
 
+from news.views import AllYangiliklarViewSet, YangiliklarViewSet
+
 from rest_framework import routers
 
 
@@ -41,7 +43,9 @@ router.register('ishlabchiqrishs', IshlabChiqrishViewSet, basename='ishlabchiqri
 router.register('products', ProductsViewSet, basename='products')
 router.register('category', ProductCategoriesViewSet, basename='categories')
 router.register('texnika', TexnikaAllViewSet, basename='texnikaliar')
+router.register('yangilik', AllYangiliklarViewSet, basename='news')
 router.register(r'rax/(?P<category_id>\d+)', RaxbariyatViewSet, basename='raxbarlar')
+router.register(r'news/(?P<category_id>\d+)', YangiliklarViewSet, basename='news')
 router.register(r'tex/(?P<category_id>\d+)', TexnikaViewSet, basename='texnika')
 router.register(r'cat/(?P<category_id>\d+)', AksiyodorlarViewSet, basename='aksiyodorlar')
 router.register(r'product/detail/(?P<category_id>\d+)', ProductDetailViewSet, basename='detail')
