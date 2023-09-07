@@ -128,8 +128,8 @@ class Jarayon(MPTTModel):
 
 
     class Meta:
-        verbose_name = "Yangilik"
-        verbose_name_plural = "Yangiliklar"
+        verbose_name = "Jarayon(Yangilik)"
+        verbose_name_plural = "Jarayonlar(Yangiliklar)"
 
 
 
