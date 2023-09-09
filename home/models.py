@@ -59,7 +59,7 @@ class SideCategory(MPTTModel):
 class Aksiyodorlar(MPTTModel):
     title = models.CharField(max_length=232)
     file = models.FileField(upload_to="media/pdf/%Y/%m/%d")
-    category = models.ForeignKey(Categoy, on_delete=models.CASCADE)
+    category = models.ManyToManyField(Categoy)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
 
 
