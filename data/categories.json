@@ -1,0 +1,800 @@
+[
+    {
+        "model": "home.categoy",
+        "pk": 1,
+        "fields": {
+            "name": "Raxbariyat",
+            "name_uz": "Raxbariyat",
+            "name_en": "Manual",
+            "name_ru": "Руководство",
+            "parent": null,
+            "slug": "raxbariyat",
+            "slug_uz": "raxbariyat",
+            "slug_en": "manual",
+            "slug_ru": "rukovodstvo",
+            "lft": 1,
+            "rght": 12,
+            "tree_id": 1,
+            "level": 0
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 2,
+        "fields": {
+            "name": "Bosh Direktor",
+            "name_uz": "Bosh Direktor",
+            "name_en": "General Boss",
+            "name_ru": "Генеральный директор",
+            "parent": 1,
+            "slug": "bosh-direktor",
+            "slug_uz": "bosh-direktor",
+            "slug_en": "general-boss",
+            "slug_ru": "generalnyj-direktor",
+            "lft": 2,
+            "rght": 5,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 3,
+        "fields": {
+            "name": "Moliya Direktori",
+            "name_uz": "Moliya Direktori",
+            "name_en": "Finance Director",
+            "name_ru": "Директор по финансам",
+            "parent": 1,
+            "slug": "moliya-direktori",
+            "slug_uz": "moliya-direktori",
+            "slug_en": "finance-director",
+            "slug_ru": "direktor-po-finansam",
+            "lft": 10,
+            "rght": 11,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 4,
+        "fields": {
+            "name": "Direktor Maslaxatchisi",
+            "name_uz": "Direktor Maslaxatchisi",
+            "name_en": "Diroctor's Advisor",
+            "name_ru": "Советник дироктора",
+            "parent": 1,
+            "slug": "direktor-maslaxatchisi",
+            "slug_uz": "direktor-maslaxatchisi",
+            "slug_en": "diroctors-advisor",
+            "slug_ru": "sovetnik-diroktora",
+            "lft": 6,
+            "rght": 7,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 5,
+        "fields": {
+            "name": "Ishlab chiqarish Direktori",
+            "name_uz": "Ishlab chiqarish Direktori",
+            "name_en": "Production Director",
+            "name_ru": "Директор по производству",
+            "parent": 1,
+            "slug": "ishlab-chiqarish-direktori",
+            "slug_uz": "ishlab-chiqarish-direktori",
+            "slug_en": "production-director",
+            "slug_ru": "direktor-po-proizvodstvu",
+            "lft": 8,
+            "rght": 9,
+            "tree_id": 1,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 16,
+        "fields": {
+            "name": "Texnika",
+            "name_uz": "Texnika",
+            "name_en": "Technic",
+            "name_ru": "Техника",
+            "parent": null,
+            "slug": "texnika",
+            "slug_uz": "texnika",
+            "slug_en": "technic",
+            "slug_ru": "tehnika",
+            "lft": 1,
+            "rght": 12,
+            "tree_id": 5,
+            "level": 0
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 17,
+        "fields": {
+            "name": "Tuproqni qayta ishlash texnikasi",
+            "name_uz": "Tuproqni qayta ishlash texnikasi",
+            "name_en": "Tillage equipment",
+            "name_ru": "Почвообробатывающая техника",
+            "parent": 16,
+            "slug": "tuproqni-qayta-ishlash-texnikasi",
+            "slug_uz": "tuproqni-qayta-ishlash-texnikasi",
+            "slug_en": "tillage-equipment",
+            "slug_ru": "pochvoobrobatyvayushaya-tehnika",
+            "lft": 10,
+            "rght": 11,
+            "tree_id": 5,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 18,
+        "fields": {
+            "name": "Ozuqa yig'ish texnikasi",
+            "name_uz": "Ozuqa yig'ish texnikasi",
+            "name_en": "Forage harvesting equipment",
+            "name_ru": "Кормоуборочная техника",
+            "parent": 16,
+            "slug": "ozuqa-yigish-texnikasi",
+            "slug_uz": "ozuqa-yigish-texnikasi",
+            "slug_en": "forage-harvesting-equipment",
+            "slug_ru": "kormouborochnaya-tehnika",
+            "lft": 6,
+            "rght": 7,
+            "tree_id": 5,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 19,
+        "fields": {
+            "name": "Traktor tirkamalari",
+            "name_uz": "Traktor tirkamalari",
+            "name_en": "Tractor trailers",
+            "name_ru": "Тракторные прицепы",
+            "parent": 16,
+            "slug": "traktor-tirkamalari",
+            "slug_uz": "traktor-tirkamalari",
+            "slug_en": "tractor-trailers",
+            "slug_ru": "traktornye-pricepy",
+            "lft": 8,
+            "rght": 9,
+            "tree_id": 5,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 20,
+        "fields": {
+            "name": "Ozuqa tarqatish texnikasi",
+            "name_uz": "Ozuqa tarqatish texnikasi",
+            "name_en": "Equipment for the distribution of feed",
+            "name_ru": "Техника для раздачи кормов",
+            "parent": 16,
+            "slug": "ozuqa-tarqatish-texnikasi",
+            "slug_uz": "ozuqa-tarqatish-texnikasi",
+            "slug_en": "equipment-for-the-distribution-of-feed",
+            "slug_ru": "tehnika-dlya-razdachi-kormov",
+            "lft": 2,
+            "rght": 5,
+            "tree_id": 5,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 32,
+        "fields": {
+            "name": "Aksiyadorlar va investorlar",
+            "name_uz": "Aksiyadorlar va investorlar",
+            "name_en": "Shareholders and investors",
+            "name_ru": "Акционеры и инвесторы",
+            "parent": null,
+            "slug": "aksiyadorlar-va-investorlar",
+            "slug_uz": "aksiyadorlar-va-investorlar",
+            "slug_en": "shareholders-and-investors",
+            "slug_ru": "akcionery-i-investory",
+            "lft": 1,
+            "rght": 60,
+            "tree_id": 2,
+            "level": 0
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 33,
+        "fields": {
+            "name": "Korporativ boshqaruv",
+            "name_uz": "Korporativ boshqaruv",
+            "name_en": "Corporate governance",
+            "name_ru": "Корпоративное управление",
+            "parent": 32,
+            "slug": "korporativ-boshqaruv",
+            "slug_uz": "korporativ-boshqaruv",
+            "slug_en": "corporate-governance",
+            "slug_ru": "korporativnoe-upravlenie",
+            "lft": 24,
+            "rght": 37,
+            "tree_id": 2,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 34,
+        "fields": {
+            "name": "Boshqaruv va nazorat organlari",
+            "name_uz": "Boshqaruv va nazorat organlari",
+            "name_en": "Management and control bodies",
+            "name_ru": "Органы управления и контроля",
+            "parent": 32,
+            "slug": "boshqaruv-va-nazorat-organlari",
+            "slug_uz": "boshqaruv-va-nazorat-organlari",
+            "slug_en": "management-and-control-bodies",
+            "slug_ru": "organy-upravleniya-i-kontrolya",
+            "lft": 2,
+            "rght": 9,
+            "tree_id": 2,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 35,
+        "fields": {
+            "name": "Hisobot",
+            "name_uz": "Hisobot",
+            "name_en": "Reporting",
+            "name_ru": "Отчетность",
+            "parent": 32,
+            "slug": "hisobot",
+            "slug_uz": "hisobot",
+            "slug_en": "reporting",
+            "slug_ru": "otchetnost",
+            "lft": 10,
+            "rght": 23,
+            "tree_id": 2,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 36,
+        "fields": {
+            "name": "Rivojlanish",
+            "name_uz": "Rivojlanish",
+            "name_en": "Development",
+            "name_ru": "Развитие",
+            "parent": 32,
+            "slug": "rivojlanish",
+            "slug_uz": "rivojlanish",
+            "slug_en": "development",
+            "slug_ru": "razvitie",
+            "lft": 54,
+            "rght": 59,
+            "tree_id": 2,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 37,
+        "fields": {
+            "name": "Oshkor qilish",
+            "name_uz": "Oshkor qilish",
+            "name_en": "Disclosure of information",
+            "name_ru": "Раскрытие информации",
+            "parent": 32,
+            "slug": "oshkor-qilish",
+            "slug_uz": "oshkor-qilish",
+            "slug_en": "disclosure-of-information",
+            "slug_ru": "raskrytie-informacii",
+            "lft": 38,
+            "rght": 53,
+            "tree_id": 2,
+            "level": 1
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 38,
+        "fields": {
+            "name": "Aktsiyadorlik kapitalining tarkibi",
+            "name_uz": "Aktsiyadorlik kapitalining tarkibi",
+            "name_en": "Share capital structure",
+            "name_ru": "Cтруктура акционерного капитала",
+            "parent": 33,
+            "slug": "aktsiyadorlik-kapitalining-tarkibi",
+            "slug_uz": "aktsiyadorlik-kapitalining-tarkibi",
+            "slug_en": "share-capital-structure",
+            "slug_ru": "ctruktura-akcionernogo-kapitala",
+            "lft": 25,
+            "rght": 26,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 39,
+        "fields": {
+            "name": "Jamiyat ustavi",
+            "name_uz": "Jamiyat ustavi",
+            "name_en": "Charter of the company",
+            "name_ru": "Устав общества",
+            "parent": 33,
+            "slug": "jamiyat-ustavi",
+            "slug_uz": "jamiyat-ustavi",
+            "slug_en": "charter-of-the-company",
+            "slug_ru": "ustav-obshestva",
+            "lft": 29,
+            "rght": 30,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 40,
+        "fields": {
+            "name": "Jamiyat hujjatlari",
+            "name_uz": "Jamiyat hujjatlari",
+            "name_en": "Documents of the company",
+            "name_ru": "Документы общества",
+            "parent": 33,
+            "slug": "jamiyat-hujjatlari",
+            "slug_uz": "jamiyat-hujjatlari",
+            "slug_en": "documents-of-the-company",
+            "slug_ru": "dokumenty-obshestva",
+            "lft": 27,
+            "rght": 28,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 41,
+        "fields": {
+            "name": "Korporativ boshqaruv tizimini baholash xulosalari",
+            "name_uz": "Korporativ boshqaruv tizimini baholash xulosalari",
+            "name_en": "Conclusions of the corporate governance system assessment",
+            "name_ru": "Заключения оценки системы корпоративного управления",
+            "parent": 33,
+            "slug": "korporativ-boshqaruv-tizimini-baholash-xulosalari",
+            "slug_uz": "korporativ-boshqaruv-tizimini-baholash-xulosalari",
+            "slug_en": "conclusions-of-the-corporate-governance-system-ass",
+            "slug_ru": "zaklyucheniya-ocenki-sistemy-korporativnogo-upravl",
+            "lft": 31,
+            "rght": 32,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 42,
+        "fields": {
+            "name": "Normativ-huquqiy baza",
+            "name_uz": "Normativ-huquqiy baza",
+            "name_en": "Regulatory framework",
+            "name_ru": "Нормативно-правовая база",
+            "parent": 33,
+            "slug": "normativ-huquqiy-baza",
+            "slug_uz": "normativ-huquqiy-baza",
+            "slug_en": "regulatory-framework",
+            "slug_ru": "normativno-pravovaya-baza",
+            "lft": 33,
+            "rght": 34,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 43,
+        "fields": {
+            "name": "O 'z kuchini yo' qotgan hujjatlar",
+            "name_uz": "O 'z kuchini yo' qotgan hujjatlar",
+            "name_en": "Expired acts",
+            "name_ru": "Утратившие силу акты",
+            "parent": 33,
+            "slug": "o-z-kuchini-yo-qotgan-hujjatlar",
+            "slug_uz": "o-z-kuchini-yo-qotgan-hujjatlar",
+            "slug_en": "expired-acts",
+            "slug_ru": "utrativshie-silu-akty",
+            "lft": 35,
+            "rght": 36,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 44,
+        "fields": {
+            "name": "Kuzatuv kengashi",
+            "name_uz": "Kuzatuv kengashi",
+            "name_en": "Supervisory Board",
+            "name_ru": "Наблюдательный совет",
+            "parent": 34,
+            "slug": "kuzatuv-kengashi",
+            "slug_uz": "kuzatuv-kengashi",
+            "slug_en": "supervisory-board",
+            "slug_ru": "nablyudatelnyj-sovet",
+            "lft": 3,
+            "rght": 4,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 45,
+        "fields": {
+            "name": "Korporativ maslahatchi",
+            "name_uz": "Korporativ maslahatchi",
+            "name_en": "Corporate Consultant",
+            "name_ru": "Корпоративный консультант",
+            "parent": 34,
+            "slug": "korporativ-maslahatchi",
+            "slug_uz": "korporativ-maslahatchi",
+            "slug_en": "corporate-consultant",
+            "slug_ru": "korporativnyj-konsultant",
+            "lft": 7,
+            "rght": 8,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 46,
+        "fields": {
+            "name": "Ichki audit xizmati",
+            "name_uz": "Ichki audit xizmati",
+            "name_en": "Internal Audit Service",
+            "name_ru": "Служба внутренного аудита",
+            "parent": 34,
+            "slug": "ichki-audit-xizmati",
+            "slug_uz": "ichki-audit-xizmati",
+            "slug_en": "internal-audit-service",
+            "slug_ru": "sluzhba-vnutrennogo-audita",
+            "lft": 5,
+            "rght": 6,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 47,
+        "fields": {
+            "name": "Moliyaviy hisobotlar",
+            "name_uz": "Moliyaviy hisobotlar",
+            "name_en": "Financial statements",
+            "name_ru": "Финансовые отчеты",
+            "parent": 35,
+            "slug": "moliyaviy-hisobotlar",
+            "slug_uz": "moliyaviy-hisobotlar",
+            "slug_en": "financial-statements",
+            "slug_ru": "finansovye-otchety",
+            "lft": 17,
+            "rght": 18,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 48,
+        "fields": {
+            "name": "Asosiy samaradorlik ko'rsatkichlari",
+            "name_uz": "Asosiy samaradorlik ko'rsatkichlari",
+            "name_en": "Key performance indicators",
+            "name_ru": "Ключевые показатели эффективности",
+            "parent": 35,
+            "slug": "asosiy-samaradorlik-korsatkichlari",
+            "slug_uz": "asosiy-samaradorlik-korsatkichlari",
+            "slug_en": "key-performance-indicators",
+            "slug_ru": "klyuchevye-pokazateli-effektivnosti",
+            "lft": 11,
+            "rght": 12,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 49,
+        "fields": {
+            "name": "Auditorlik xulosasi",
+            "name_uz": "Auditorlik xulosasi",
+            "name_en": "Audit report",
+            "name_ru": "Аудиторское заключения",
+            "parent": 35,
+            "slug": "auditorlik-xulosasi",
+            "slug_uz": "auditorlik-xulosasi",
+            "slug_en": "audit-report",
+            "slug_ru": "auditorskoe-zaklyucheniya",
+            "lft": 13,
+            "rght": 14,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 50,
+        "fields": {
+            "name": "Biznes-reja",
+            "name_uz": "Biznes-reja",
+            "name_en": "Business Plan",
+            "name_ru": "Бизнес-план",
+            "parent": 35,
+            "slug": "biznes-reja-parametrlarini-bajarish",
+            "slug_uz": "biznes-reja-parametrlarini-bajarish",
+            "slug_en": "execution-of-business-plan-parameters",
+            "slug_ru": "vypolnenie-parametrov-biznes-plana",
+            "lft": 15,
+            "rght": 16,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 51,
+        "fields": {
+            "name": "Rivojlanish strategiyasi",
+            "name_uz": "Rivojlanish strategiyasi",
+            "name_en": "Development strategy",
+            "name_ru": "Стратегия развития",
+            "parent": 35,
+            "slug": "rivojlanish-strategiyasini-amalga-oshirish",
+            "slug_uz": "rivojlanish-strategiyasini-amalga-oshirish",
+            "slug_en": "implementation-of-the-development-strategy",
+            "slug_ru": "vypolnenie-strategii-razvitiya",
+            "lft": 19,
+            "rght": 20,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 52,
+        "fields": {
+            "name": "Sof foydani taqsimlash",
+            "name_uz": "Sof foydani taqsimlash",
+            "name_en": "Distribution of net profit",
+            "name_ru": "Распределение чистой прибыли",
+            "parent": 35,
+            "slug": "sof-foydani-taqsimlash",
+            "slug_uz": "sof-foydani-taqsimlash",
+            "slug_en": "distribution-of-net-profit",
+            "slug_ru": "raspredelenie-chistoj-pribyli",
+            "lft": 21,
+            "rght": 22,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 53,
+        "fields": {
+            "name": "Rivojlanish strategiyasi",
+            "name_uz": "Rivojlanish strategiyasi",
+            "name_en": "Development strategy",
+            "name_ru": "Стратегия развития",
+            "parent": 36,
+            "slug": "rivojlanish-strategiyasi",
+            "slug_uz": "rivojlanish-strategiyasi",
+            "slug_en": "development-strategy",
+            "slug_ru": "strategiya-razvitiya",
+            "lft": 57,
+            "rght": 58,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 54,
+        "fields": {
+            "name": "Biznes-rejalar",
+            "name_uz": "Biznes-rejalar",
+            "name_en": "Business plans",
+            "name_ru": "Бизнес планы",
+            "parent": 36,
+            "slug": "biznes-rejalar",
+            "slug_uz": "biznes-rejalar",
+            "slug_en": "business-plans",
+            "slug_ru": "biznes-plany",
+            "lft": 55,
+            "rght": 56,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 55,
+        "fields": {
+            "name": "Dividendlar haqida ma'lumot",
+            "name_uz": "Dividendlar haqida ma'lumot",
+            "name_en": "Information about dividends",
+            "name_ru": "Сведения о дивидендах",
+            "parent": 37,
+            "slug": "dividendlar-haqida-malumot",
+            "slug_uz": "dividendlar-haqida-malumot",
+            "slug_en": "information-about-dividends",
+            "slug_ru": "svedeniya-o-dividendah",
+            "lft": 43,
+            "rght": 44,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 56,
+        "fields": {
+            "name": "Bildirishnomalar",
+            "name_uz": "Bildirishnomalar",
+            "name_en": "Notifications",
+            "name_ru": "Уведомления",
+            "parent": 37,
+            "slug": "bildirishnomalar",
+            "slug_uz": "bildirishnomalar",
+            "slug_en": "notifications",
+            "slug_ru": "uvedomleniya",
+            "lft": 41,
+            "rght": 42,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 57,
+        "fields": {
+            "name": "Ovoz berishning muhim faktlari va natijalari",
+            "name_uz": "Ovoz berishning muhim faktlari va natijalari",
+            "name_en": "Essential facts and voting results",
+            "name_ru": "Существенные факты и итоги голосований",
+            "parent": 37,
+            "slug": "ovoz-berishning-muhim-faktlari-va-natijalari",
+            "slug_uz": "ovoz-berishning-muhim-faktlari-va-natijalari",
+            "slug_en": "essential-facts-and-voting-results",
+            "slug_ru": "sushestvennye-fakty-i-itogi-golosovanij",
+            "lft": 51,
+            "rght": 52,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 58,
+        "fields": {
+            "name": "Emissiya prospektlari",
+            "name_uz": "Emissiya prospektlari",
+            "name_en": "Issue prospectuses",
+            "name_ru": "Проспекты эмиссии",
+            "parent": 37,
+            "slug": "emissiya-prospektlari",
+            "slug_uz": "emissiya-prospektlari",
+            "slug_en": "issue-prospectuses",
+            "slug_ru": "prospekty-emissii",
+            "lft": 47,
+            "rght": 48,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 59,
+        "fields": {
+            "name": "Dividendlarni to'lash uchun ariza",
+            "name_uz": "Dividendlarni to'lash uchun ariza",
+            "name_en": "Application for payment of dividends",
+            "name_ru": "Заявление для выплаты дивидендов",
+            "parent": 37,
+            "slug": "dividendlarni-tolash-uchun-ariza",
+            "slug_uz": "dividendlarni-tolash-uchun-ariza",
+            "slug_en": "application-for-payment-of-dividends",
+            "slug_ru": "zayavlenie-dlya-vyplaty-dividendov",
+            "lft": 45,
+            "rght": 46,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 60,
+        "fields": {
+            "name": "\"To'liq yoki tushuntirish\" tamoyili bo'yicha ma'lumot",
+            "name_uz": "\"To'liq yoki tushuntirish\" tamoyili bo'yicha ma'lumot",
+            "name_en": "Information on the principle of \"comply or explain\"",
+            "name_ru": "Информация по принципу «comply or explain»",
+            "parent": 37,
+            "slug": "toliq-yoki-tushuntirish-tamoyili-boyicha-malumot",
+            "slug_uz": "toliq-yoki-tushuntirish-tamoyili-boyicha-malumot",
+            "slug_en": "information-on-the-principle-of-comply-or-explain",
+            "slug_ru": "informaciya-po-principu-comply-or-explain",
+            "lft": 39,
+            "rght": 40,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 61,
+        "fields": {
+            "name": "Investitsiya portfeli",
+            "name_uz": "Investitsiya portfeli",
+            "name_en": "Investment portfolio",
+            "name_ru": "Инвестиционный портфель",
+            "parent": 37,
+            "slug": "investitsiya-portfeli",
+            "slug_uz": "investitsiya-portfeli",
+            "slug_en": "investment-portfolio",
+            "slug_ru": "investicionnyj-portfel",
+            "lft": 49,
+            "rght": 50,
+            "tree_id": 2,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 62,
+        "fields": {
+            "name": "Atajonov Juratbek Atavaevich",
+            "name_uz": "Atajonov Juratbek Atavaevich",
+            "name_en": "Atajonov Juratbek Atavaevich",
+            "name_ru": "АТАЖОНОВ ЖУРЪАТБЕК АТАВАЕВИЧ",
+            "parent": 2,
+            "slug": "atajonov-juratbek-atavaevich",
+            "slug_uz": "atajonov-juratbek-atavaevich",
+            "slug_en": "atajonov-juratbek-atavaevich",
+            "slug_ru": "atazhonov-zhuratbek-atavaevich",
+            "lft": 3,
+            "rght": 4,
+            "tree_id": 1,
+            "level": 2
+        }
+    },
+    {
+        "model": "home.categoy",
+        "pk": 63,
+        "fields": {
+            "name": "Техника для раздачи корма",
+            "name_uz": "Техника для раздачи корма",
+            "name_en": "Техника для раздачи корма",
+            "name_ru": "Техника для раздачи корма",
+            "parent": 20,
+            "slug": "tehnika-dlya-razdachi-korma",
+            "slug_uz": "tehnika-dlya-razdachi-korma",
+            "slug_en": "tehnika-dlya-razdachi-korma",
+            "slug_ru": "tehnika-dlya-razdachi-korma",
+            "lft": 3,
+            "rght": 4,
+            "tree_id": 5,
+            "level": 2
+        }
+    }
+]
