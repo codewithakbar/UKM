@@ -31,6 +31,7 @@ class Categoy(MPTTModel):
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
 
     slug = models.SlugField(unique=True, blank=True, null=True)
+    status = models.BooleanField(default=True)
 
     class MPTTMeta:
         order_insertion_by = ['name']
@@ -61,6 +62,7 @@ class Aksiyodorlar(MPTTModel):
     file = models.FileField(upload_to="media/pdf/%Y/%m/%d")
     category = TreeForeignKey(Categoy, on_delete=models.CASCADE, null=True, blank=True)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+    
 
 
     def __str__(self) -> str:

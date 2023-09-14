@@ -32,7 +32,7 @@ class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
 class CategoyAdmin(DraggableMPTTAdmin, TranslationAdmin):
     list_display = ('tree_actions', 'indented_title')
     prepopulated_fields = {'slug': ('name',)}
-    fields = ("name", "parent", "slug")
+    fields = ("name", "parent", "slug", "status")
     mptt_indent_field = "name"
     group_fieldsets = True
 
