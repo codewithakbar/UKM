@@ -30,7 +30,7 @@ class BannerAdmin(TranslationAdmin, DraggableMPTTAdmin):
 
 @admin.register(Categoy)
 class CategoyAdmin(DraggableMPTTAdmin, TranslationAdmin):
-    list_display = ('tree_actions', 'indented_title')
+    list_display = ('tree_actions', 'indented_title', "status")
     prepopulated_fields = {'slug': ('name',)}
     fields = ("name", "parent", "slug", "status")
     mptt_indent_field = "name"
