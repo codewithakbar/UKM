@@ -2,7 +2,7 @@ from modeltranslation.translator import TranslationOptions, register
 
 from products.models import ProductCategories
 from news.models import Yangiliklar
-from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, Texnika
+from .models import Banner, Categoy, RaxbariyatTable, SideCategory, Tanishuv, Jarayon, IshlabChiqrish, Aksiyodorlar, Raxbariyat, Texnika, TexnikaTable
 
 
 @register(Banner)
@@ -53,6 +53,13 @@ class RaxbariyatTableTranslationOptions(TranslationOptions):
 @register(Texnika)
 class TexnikaTranslationOptions(TranslationOptions):
     fields = ('title', 'madel', 'desc')
+
+
+
+@register(TexnikaTable)
+class TexnikaTranslationOptions(TranslationOptions):
+    fields = ('title', 'kub', 'sigim')
+
 
 
 @register(Yangiliklar)

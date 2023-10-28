@@ -14,7 +14,7 @@ class RaxbariyatTableInline(admin.TabularInline):
 
 class TexnikaTableInline(admin.TabularInline):
     model = TexnikaTable
-    fields = ("title", "kub", "sigim")
+    fields = ("title_uz", "title_ru", "title_en", "kub_uz", "kub_ru", "kub_en", "sigim_uz", "sigim_ru", "sigim_en")
     extra = 1
 
 
