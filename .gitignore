@@ -159,3 +159,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 home/migrations/0004_texnikatable_kub_en_texnikatable_kub_ru_and_more.py
+data.zip
